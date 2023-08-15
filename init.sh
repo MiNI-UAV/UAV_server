@@ -10,6 +10,7 @@ echo "Build C++ projects"
 for PROJECT_PATH in UAV_physics_engine UAV_controller UAV_drop_physic
 do
         cd $PROJECT_PATH
+        git submodule update --init --recursive
         mkdir build
         cd build
         cmake ..

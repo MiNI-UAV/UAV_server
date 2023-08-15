@@ -1,14 +1,18 @@
 version: "3"
 
 services:
-  uav_server
+  uav_server:
     container_name: uav_server
-    restart: always
     image: xevi8x/uav_server
     ports:
+      - "8000:8000"
       - "9000:9000"
       - "9090:9090"
       - "9100:9100"
       - "10000-10032:10000-10032"
-      - "11000-10032:11000-10032"
-      - "12000-10032:12000-10032"
+      - "11000-11032:11000-11032"
+    init: true
+    # Use volume to override default options
+    # volumes:
+    #   - data/configs/:configs/
+    #   - data/config.yaml:config.yaml

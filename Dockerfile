@@ -27,4 +27,6 @@ WORKDIR /UAV
 
 RUN ./init.sh
 
-CMD ["/bin/bash"]
+WORKDIR /UAV/UAV_aggregator
+
+ENTRYPOINT ["cargo", "run"]

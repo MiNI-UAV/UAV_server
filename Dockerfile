@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ADD . /UAV
+ADD ./scripts_docker /UAV
 
 RUN apt-get update && \
     apt-get install -y gcc g++ make cmake \

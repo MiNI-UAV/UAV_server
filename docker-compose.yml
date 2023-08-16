@@ -12,7 +12,7 @@ services:
       - "10000-10032:10000-10032"
       - "11000-11032:11000-11032"
     init: true
-    # Use volume to override default options
-    # volumes:
-    #   - data/configs/:configs/
-    #   - data/config.yaml:config.yaml
+    volumes:
+      - ./data/configs:/UAV/UAV_aggregator/configs
+      - ./data/assets:/UAV/UAV_aggregator/assets
+      - ./data/logs:/UAV/UAV_aggregator/logs

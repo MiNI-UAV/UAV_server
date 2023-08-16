@@ -11,16 +11,14 @@ https://hub.docker.com/repository/docker/xevi8x/uav_server
 ```git clone https://github.com/MiNI-UAV/UAV_server && cd UAV_server```
 
 2. Prepare data folder containing assets and configs
-```./prepareVolume.sh```
-You may want to edit some params
+   
+    ```./prepareVolume.sh```
 
-3.   Run command in folder containing docker-compose.yml
+    You may want to edit some params in ```./data``` folder
 
-In terminal:
-```docker compose up```
-Exit with SIGINT
+4.   Run command in folder containing docker-compose.yml
 
-Or in background:
-```docker compose up -d```
-And stop with command:
-```docker compose stop```
+     In terminal: ```docker compose up``` and exit with SIGINT
+
+     Or in background: ```docker compose up -d```
+     and stop with command: ```docker compose stop```

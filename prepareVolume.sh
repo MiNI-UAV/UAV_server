@@ -2,7 +2,8 @@
 
 mkdir -p data
 cd data
-git clone -q https://github.com/MiNI-UAV/UAV_aggregator
+git clone https://github.com/MiNI-UAV/UAV_aggregator
+git lfs fetch --all
 cp -r UAV_aggregator/assets .
 cp -r UAV_aggregator/configs .
 mkdir -p logs

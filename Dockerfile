@@ -3,11 +3,14 @@ FROM ubuntu:latest
 ADD ./scripts_docker /UAV
 
 RUN apt-get update && \
-    apt-get install -y gcc g++ make cmake \
+    apt-get install -y gcc g++ make cmake  \
     build-essential curl autoconf automake \
     libtool pkg-config libsodium-dev wget \
-    git libx11-dev && \
-    apt-get update
+    git libx11-dev software-properties-common && \
+    apt-get update && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git-lfs && \
+    git lfs install
 
 #C++
 RUN apt-get install -y libcxxopts-dev

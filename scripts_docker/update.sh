@@ -4,6 +4,7 @@ echo "Update repositories"
 for PROJECT_PATH in UAV_aggregator UAV_physics_engine UAV_controller UAV_drop_physic
 do
         cd $PROJECT_PATH
+        git lfs fetch --all
         git pull
         cd ..
 done

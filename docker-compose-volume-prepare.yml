@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  uav_server:
+    container_name: uav_server
+    image: xevi8x/uav_server
+    init: true
+    volumes:
+       - ./data:/mount
+    #   - ./data/configs:/UAV/UAV_aggregator/configs
+    #   - ./data/assets:/UAV/UAV_aggregator/assets
+    #   - ./data/logs:/UAV/UAV_aggregator/logs

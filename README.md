@@ -12,7 +12,7 @@ https://hub.docker.com/repository/docker/xevi8x/uav_server
 
 2. Prepare data folder containing assets and configs
    
-    ```./prepareVolume.sh```
+    Linux: ```./prepareVolume.sh```, Windows: ```prepareVolume.bat```
 
     You may want to edit some params in ```./data``` folder
 

@@ -15,7 +15,15 @@ do
         mkdir build
         cd build
         cmake ..
-        make
+        if [ $? -ne 0 ]; then
+                echo "$PROJECT_PATH : CMake configuration failed. Please check your CMakeLists.txt and try again."
+                exit 1
+        fi
+        make -j$(nproc)
+        if [ $? -ne 0 ]; then
+                echo "$PROJECT_PATH : Build failed. Please check the error messages above."
+                exit 1
+        fi
         cd ../..
 done
 

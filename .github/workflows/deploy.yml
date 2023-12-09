@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [dependency_update]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
   
 jobs:
   push_to_registry:
